@@ -19,6 +19,8 @@
 
 ## 동작 예시
 
+![Swagger UI에서 /ask 호출: 답변, 출처, 근거 점수](docs/demo.jpg)
+
 현재 코드로 실제 실행한 결과입니다 (CPU, `kanana2:3b`).
 
 ```
@@ -120,6 +122,10 @@ python -m eval.run_eval --e2e    # + 답변 정확도, 거절율
 - [ ] 표·이미지가 포함된 PDF 파싱
 - [ ] 질문 분해/재검색을 하는 Agentic RAG
 - [ ] 스트리밍 응답, 간단한 웹 UI
+
+## 라이선스
+
+[MIT](LICENSE)
 
 ## 이 주제를 고른 이유
 
