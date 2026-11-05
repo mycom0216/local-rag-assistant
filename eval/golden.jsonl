@@ -1,0 +1,18 @@
+{"q": "연차휴가는 며칠 부여되나요?", "source": "취업규칙.md", "section": "연차휴가", "keyword": "15", "answerable": true}
+{"q": "병가는 1년에 최대 며칠까지 쓸 수 있어?", "source": "취업규칙.md", "section": "병가", "keyword": "30일", "answerable": true}
+{"q": "배우자가 출산하면 휴가를 얼마나 받나요", "source": "취업규칙.md", "section": "경조휴가", "keyword": "10일", "answerable": true}
+{"q": "재택근무 신청은 언제까지 해야 하나요?", "source": "취업규칙.md", "section": "신청 및 승인", "keyword": "하루 전", "answerable": true}
+{"q": "코어타임이 몇 시부터 몇 시까지야?", "source": "취업규칙.md", "section": "소정근로시간", "keyword": "10시", "answerable": true}
+{"q": "비밀번호는 몇 자 이상으로 만들어야 해?", "source": "정보보안규정.md", "section": "비밀번호 정책", "keyword": "12자", "answerable": true}
+{"q": "MFA 인증 수단으로 문자 메시지를 써도 되나요?", "source": "정보보안규정.md", "section": "다중 인증", "keyword": "허용하지 않", "answerable": true}
+{"q": "ChatGPT 같은 외부 AI에 소스코드 넣어도 돼?", "source": "정보보안규정.md", "section": "생성형 AI 사용", "keyword": "로컬", "answerable": true}
+{"q": "계정이 해킹된 것 같으면 어디에 얼마 안에 알려야 해?", "source": "정보보안규정.md", "section": "보안사고 신고", "keyword": "1시간", "answerable": true}
+{"q": "SEV1 장애가 나면 몇 분 안에 대응을 시작해야 하나요?", "source": "장애대응매뉴얼.md", "section": "등급별 대응 시간", "keyword": "5분", "answerable": true}
+{"q": "장애 첫 고객 공지는 언제까지 올려야 해?", "source": "장애대응매뉴얼.md", "section": "대외 공지", "keyword": "20분", "answerable": true}
+{"q": "장애 사후 분석 보고서는 언제까지 쓰나요?", "source": "장애대응매뉴얼.md", "section": "사후 분석 보고서", "keyword": "3일", "answerable": true}
+{"q": "우리 회사 점심 식대 지원금은 얼마인가요?", "answerable": false}
+{"q": "작년 영업이익이 얼마였어?", "answerable": false}
+{"q": "사내 주차장 이용 규칙을 알려줘", "answerable": false}
+{"q": "퇴직금은 어떻게 계산하나요?", "answerable": false}
+{"q": "신입사원 교육은 몇 주 동안 받나요?", "answerable": false}
+{"q": "회사 복지 포인트는 1년에 얼마나 줘?", "answerable": false}
