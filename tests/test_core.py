@@ -1,7 +1,7 @@
 """Ollama 없이 돌아가는 단위 테스트."""
 from rag.chunker import chunk_documents
 from rag.index import rrf, tokenize
-from rag.pipeline import used_citations
+from rag.pipeline import resolve_citations, used_citations
 
 DOC = """# 규정
 
@@ -43,3 +43,9 @@ def test_rrf_prefers_docs_ranked_high_in_both_lists():
 
 def test_used_citations_ignores_out_of_range():
     assert used_citations("답입니다 [1] 그리고 [3] [9]", 3) == [1, 3]
+
+
+def test_missing_citation_falls_back_to_top_chunk_only():
+    # 모델이 [n] 을 빠뜨려도 컨텍스트 전체가 아니라 1순위 청크 하나만 출처로 쓴다
+    assert resolve_citations("15일", 3) == [1]
+    assert resolve_citations("15일 [2]", 3) == [2]

@@ -50,6 +50,14 @@ def used_citations(text: str, n: int) -> list[int]:
     return sorted({int(m) for m in re.findall(r"\[(\d+)\]", text) if 1 <= int(m) <= n})
 
 
+def resolve_citations(text: str, n: int) -> list[int]:
+    """답변이 인용한 번호. 모델이 인용을 빠뜨리면 검색 1순위 청크 하나만 출처로 쓴다.
+
+    컨텍스트 전체를 출처로 내보내면 답과 무관한 섹션이 근거처럼 보이기 때문이다.
+    """
+    return used_citations(text, n) or [1]
+
+
 def ask(index: Index, question: str, mode: str = "hybrid") -> Answer:
     hits = index.search(question, k=config.TOP_K, mode=mode)
     top_dense = max((h.dense for h in hits), default=0.0)
@@ -63,7 +71,7 @@ def ask(index: Index, question: str, mode: str = "hybrid") -> Answer:
     if NO_ANSWER in text:
         return Answer(NO_ANSWER, False, [], top_dense)
 
-    cited = used_citations(text, len(hits)) or list(range(1, len(hits) + 1))
+    cited = resolve_citations(text, len(hits))
     sources = [
         {
             "ref": i,
